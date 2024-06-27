@@ -37,37 +37,37 @@ namespace RMC_protocol
 
     namespace RMC_function
     {
-        public class functions : MonoBehaviour
+        public class functions
         {
-            public byte[] QuaternionToByteArray(Quaternion rotation)
+            public byte[] QuaternionToByteArray(Quaternion rotation)// converted segment quaternion to byte array
             {
                 byte[] byteArray = new byte[16];
                 Buffer.BlockCopy(new float[] { rotation.x, rotation.y, rotation.z, rotation.w }, 0, byteArray, 0, 16);
                 return byteArray;
             }
 
-            public Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset)
+            public Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset) // converted segment byte array to Quaternion
             {
                 float[] floatArray = new float[4];
                 Buffer.BlockCopy(byteArray, offset, floatArray, 0, 16);
                 return new Quaternion(floatArray[0], floatArray[1], floatArray[2], floatArray[3]);
             }
 
-            public byte[] Vector3ToByteArray(Vector3 vector)
+            public byte[] Vector3ToByteArray(Vector3 vector) // converted to root position to byte array
             {
                 byte[] byteArray = new byte[12];
                 Buffer.BlockCopy(new float[] { vector.x, vector.y, vector.z }, 0, byteArray, 0, 12);
                 return byteArray;
             }
 
-            public Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
+            public Vector3 ByteArrayToVector3(byte[] byteArray, int offset) // converted to byte array to root position
             {
                 float[] floatArray = new float[3];
                 Buffer.BlockCopy(byteArray, offset, floatArray, 0, 12);
                 return new Vector3(floatArray[0], floatArray[1], floatArray[2]);
             }
 
-            public byte[] GetBoneRotationsAsByteArray(Animator animator)
+            public byte[] GetBoneRotationsAsByteArray(Animator animator) // Obtain the segment data from the animator
             {
                 if (!animator) return null;
 
@@ -97,7 +97,7 @@ namespace RMC_protocol
                 return rotationsByteArray;
             }
 
-            public HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
+            public HumanBodyBones ConvertStringToHumanBodyBone(string boneName) // Could be modified to your own avatar
             {
                 switch (boneName)
                 {
@@ -122,30 +122,30 @@ namespace RMC_protocol
                     case "RightLowerLeg": return HumanBodyBones.RightLowerLeg;
                     case "RightFoot": return HumanBodyBones.RightFoot;
                     case "RightToes": return HumanBodyBones.RightToes;
-                    default: return HumanBodyBones.LastBone;
+                    default: return HumanBodyBones.LastBone; // Called when the bone name was not found
                 }
             }
 
             public void SetBoneRotationsFromByteArray(byte[] rotationsByteArray, Animator sourceAnimator, bool isMine)
             {
-                if (!isMine)
+                if (!isMine) // It is called that the avatar is not belonging to the user
                 {
                     if (!sourceAnimator) return;
 
                     RMC_param param = new RMC_param();
                     string[] bones = param.bones;
 
-                    sourceAnimator.transform.position = ByteArrayToVector3(rotationsByteArray, 0);
+                    sourceAnimator.transform.position = ByteArrayToVector3(rotationsByteArray, 0); // Set the root position
 
                     for (int i = 0; i < bones.Length; i++)
                     {
-                        HumanBodyBones bone = ConvertStringToHumanBodyBone(bones[i]);
+                        HumanBodyBones bone = ConvertStringToHumanBodyBone(bones[i]); // Convert bone name to bone dataset
                         if (bone != HumanBodyBones.LastBone)
                         {
                             Transform boneTransform = sourceAnimator.GetBoneTransform(bone);
                             if (boneTransform)
                             {
-                                boneTransform.localRotation = ByteArrayToQuaternion(rotationsByteArray, i * 16 + 12);
+                                boneTransform.localRotation = ByteArrayToQuaternion(rotationsByteArray, i * 16 + 12); // Set the local joint quaternion
                             }
                         }
                     }
