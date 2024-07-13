@@ -1,7 +1,7 @@
-# RMCP_Dokkyo
-RMC protocol from Dokkyo Medical University
-## namespace: RPC
-### namespace: RPC.Server
+# RMCP API document
+This is an API document for using the RMC protocol.
+## namespace: RMC
+### namespace: RMC.Server
 #### Class: PhotonServer
 ```csharp
 public void Connect(string roomName, Vector3 initialPosition, string avatarPrefabName)
