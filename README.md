@@ -27,3 +27,34 @@ Converting the Quaternion array of a bone rotation to a byte array.
 public static Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset)
 ```
 Converting the byte array of a bone rotation to a Quaternion array.
+```csharp
+public static byte[] Vector3ToByteArray(Vector3 vector)
+```
+
+```csharp
+public static Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
+```
+
+```csharp
+public static string[] bones
+```
+
+```csharp
+public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
+```
+
+```csharp
+public static byte[] GetBoneRotationsAsByteArray(Animator animator)
+```
+
+```csharp
+public static void SetBoneRotationsFromByteArray(Animator animator, byte[] rotationsByteArray)
+```
+
+```csharp
+public static Animator InitializeAnimator(string objectName, out float timePerFrame, float framesPerSecond)
+```
+
+```csharp
+public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame)
+```
