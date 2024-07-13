@@ -9,3 +9,6 @@ public void Connect(string roomName, Vector3 initialPosition, string avatarPrefa
 roomName: Room name in the photon environment
 initialPosition: a global position where an avatar prefab is instantiated.
 avatarPrefabName: a name of avatar prefab file that is instantiated. The file must be included in Assets/Photon/PhotonUnityNetworking/Resources
+```csharp
+public override void OnConnectedToMaster()
+```
