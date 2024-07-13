@@ -17,3 +17,8 @@ A callback while successfully connected with the master server.
 public override void OnJoinedRoom()
 ```
 A callback while successfully connected with the game server.
+### namespace: RPC.MoCap
+#### Class: calc_funcs
+```csharp
+public static byte[] QuaternionToByteArray(Quaternion rotation)
+```
