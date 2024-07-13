@@ -12,3 +12,4 @@ avatarPrefabName: a name of avatar prefab file that is instantiated. The file mu
 ```csharp
 public override void OnConnectedToMaster()
 ```
+A callback while successfully connected with the master server.
