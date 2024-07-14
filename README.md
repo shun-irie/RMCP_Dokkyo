@@ -88,12 +88,34 @@ public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
 ```
 Converting the bone names to the parameter of HumanBodyBones.
 The list of HumanBodynames are written below. The definition of HumanBodyBones should be referred [here](https://docs.unity3d.com/ja/2020.3/ScriptReference/HumanBodyBones.html).
-| string | Class |
-| ------ | ----- |
-| Hips | HumanBodyBones.Hips |
-| Spine | HumanBodyBones.Spine |
-| Chest | HumanBodyBones.Chest |
-| Neck | HumanBodyBones.Neck |
+**Input & Output**
+| String           | Class                       |
+| ---------------- | --------------------------- |
+| Hips             | HumanBodyBones.Hips         |
+| Spine            | HumanBodyBones.Spine        |
+| Chest            | HumanBodyBones.Chest        |
+| Neck             | HumanBodyBones.Neck         |
+| Head             | HumanBodyBones.Head         |
+| LeftShoulder     | HumanBodyBones.LeftShoulder |
+| LeftUpperArm     | HumanBodyBones.LeftUpperArm |
+| LeftLowerArm     | HumanBodyBones.LeftLowerArm |
+| LeftHand         | HumanBodyBones.LeftHand     |
+| RightShoulder    | HumanBodyBones.RightShoulder|
+| RightUpperArm    | HumanBodyBones.RightUpperArm|
+| RightLowerArm    | HumanBodyBones.RightLowerArm|
+| RightHand        | HumanBodyBones.RightHand    |
+| LeftUpperLeg     | HumanBodyBones.LeftUpperLeg |
+| LeftLowerLeg     | HumanBodyBones.LeftLowerLeg |
+| LeftFoot         | HumanBodyBones.LeftFoot     |
+| LeftToes         | HumanBodyBones.LeftToes     |
+| RightUpperLeg    | HumanBodyBones.RightUpperLeg|
+| RightLowerLeg    | HumanBodyBones.RightLowerLeg|
+| RightFoot        | HumanBodyBones.RightFoot    |
+| RightToes        | HumanBodyBones.RightToes    |
+| (default)        | HumanBodyBones.LastBone     |
+
+
+
 
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
