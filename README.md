@@ -84,12 +84,15 @@ Converting the byte array to a position vector data.
 
 ```csharp
 public static string[] bones
-```
-The list includes all bone names to be synchronized across users.
-```csharp
 public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
 ```
-Converting the bone names to the parameter of HumanBodyBones
+Converting the bone names to the parameter of HumanBodyBones.
+The list of HumanBodynames are written below.
+| string | Class |
+| ------ | ----- |
+| Hips | HumanBodyBones.Hips |
+
+
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
 ```
