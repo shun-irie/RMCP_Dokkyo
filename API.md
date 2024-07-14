@@ -26,11 +26,14 @@ A callback while successfully connected with the game server.
 ```csharp
 public static byte[] QuaternionToByteArray(Quaternion rotation)
 ```
-Converting the Quaternion array of a bone rotation to a byte array.
+**Input**
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 | Quaternion | rotation | the quaternion of a bone|
-
+**Output**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| byte[]| | byte array converted from a quaternion of joint rotation|
 ```csharp
 public static Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset)
 ```
