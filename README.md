@@ -70,6 +70,13 @@ Converting the position data to a byte array.
 public static Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
 ```
 Converting the byte array to a position vector data.
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| byte[]|byteArray| a byte array of a global position vector|
+|int|offset|offset of reading byte array|
+
 ```csharp
 public static string[] bones
 ```
