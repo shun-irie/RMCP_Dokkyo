@@ -30,19 +30,19 @@ Converting the byte array of a bone rotation to a Quaternion array.
 ```csharp
 public static byte[] Vector3ToByteArray(Vector3 vector)
 ```
-
+Converting the position data to a byte array.
 ```csharp
 public static Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
 ```
-
+Converting the byte array to a position vector data.
 ```csharp
 public static string[] bones
 ```
-
+The list includes all bone names to be synchronized across users.
 ```csharp
 public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
 ```
-
+Converting the bone names to the parameter of HumanBodyBones
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
 ```
