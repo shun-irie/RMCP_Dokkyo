@@ -145,6 +145,15 @@ The function updates avatar bones from a bone byte array.
 public static Animator InitializeAnimator(string objectName, out float timePerFrame, float framesPerSecond)
 ```
 Initialize animator and update frequency
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| string | objectName | Name of avatar name |
+| float | timePerFrame | time per frame |
+| float | framesPerSecond | frames per second |
+
+
 ```csharp
  public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, Transform root, ref float timer, float timePerFrame, string rpcMethodName)
 ```
