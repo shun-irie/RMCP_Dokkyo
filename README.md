@@ -94,3 +94,6 @@ Initialize animator and update frequency
 public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame, string rpcMethodName)
 ```
 The function processes the synchronization of avatar movement across users.
+```csharp
+public static void SetAnimatorStateFromByteArray(Animator animator, Transform root, byte[] data)
+```
