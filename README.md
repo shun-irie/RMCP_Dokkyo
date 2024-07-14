@@ -61,6 +61,11 @@ Converting the position data to a byte array.
 | ---- | -------- | ----------------------------------- |
 | Vector3 | vector | a global position of root position of an avatar|
 
+**Output**
+| type | description                         |
+| ---- | ----------------------------------- |
+|byte[]|a byte array converted from a global position vector|
+
 ```csharp
 public static Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
 ```
