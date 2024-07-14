@@ -1,4 +1,4 @@
-# RMCP API document
+# RMCP API
 This is an API document for using the RMC protocol.
 ## namespace: RMC
 ### namespace: RMC.Server
