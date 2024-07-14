@@ -176,3 +176,11 @@ The function processes the synchronization of avatar movement across users.
 ```csharp
 public static void SetAnimatorStateFromByteArray(Animator animator, Transform root, byte[] data)
 ```
+The function for remote procedure calling. 
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| Animator | animator | a animator of an avatar |
+| Transform | root | root transform of an avatar |
+| byte[] | data | a byte array of global position and rotation in all bones |
