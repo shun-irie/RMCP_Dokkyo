@@ -39,6 +39,7 @@ public static byte[] QuaternionToByteArray(Quaternion rotation)
 public static Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset)
 ```
 Converting the byte array of a bone rotation to a Quaternion array.
+
 **Input**
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
