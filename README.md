@@ -77,6 +77,11 @@ Converting the byte array to a position vector data.
 | byte[]|byteArray| a byte array of a global position vector|
 |int|offset|offset of reading byte array|
 
+**Output**
+| type | description                         |
+| ---- | ----------------------------------- |
+| Vector3 | a vector of avatar root position converted from byte array|
+
 ```csharp
 public static string[] bones
 ```
