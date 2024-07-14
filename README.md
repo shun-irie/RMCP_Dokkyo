@@ -120,12 +120,12 @@ public static byte[] GetBoneRotationsAsByteArray(Animator animator)
 ```
 The function extracted the rotations of all bones from the animator. However, the avatar must be ***humanoid***.
 
-** Input **
+**Input**
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 |Animator|animator|animator of an avatar |
 
-** Output **
+**Output**
 | type | description                         |
 | ---- | ----------------------------------- |
 | byte[] | a byte array including all bone rotations|
