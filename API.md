@@ -39,6 +39,12 @@ public static byte[] QuaternionToByteArray(Quaternion rotation)
 public static Quaternion ByteArrayToQuaternion(byte[] byteArray, int offset)
 ```
 Converting the byte array of a bone rotation to a Quaternion array.
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| byte[] | byteArray | joint rotation byte array calculated by QuaternionToByteArray|
+
+
 ```csharp
 public static byte[] Vector3ToByteArray(Vector3 vector)
 ```
