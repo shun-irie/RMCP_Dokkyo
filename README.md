@@ -153,11 +153,26 @@ Initialize animator and update frequency
 | float | timePerFrame | time per frame |
 | float | framesPerSecond | frames per second |
 
+**Output**
+| type | description                         |
+| ---- | ----------------------------------- |
+| float | timePerFrame (arg out)|
 
 ```csharp
  public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, Transform root, ref float timer, float timePerFrame, string rpcMethodName)
 ```
 The function processes the synchronization of avatar movement across users.
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| PhotonView | photonView | an instance of photon server |
+| Animator | sourceAnimator | an animator of an avatar |
+| Transform | root | a transform of avatar root |
+| float | timer | timer for update (ref) |
+| float | timePerFrame | frame time |
+| string | rpcMethodName | the name of remote procedure calling |
+
 ```csharp
 public static void SetAnimatorStateFromByteArray(Animator animator, Transform root, byte[] data)
 ```
