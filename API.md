@@ -7,8 +7,6 @@ This is an API document for using the RMC protocol.
 public void Connect(string roomName, Vector3 initialPosition, string avatarPrefabName)
 ```
 **Input**
-
-|------- | ---- | ---- |
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 |string| roomName | room name that the user will log in.|
