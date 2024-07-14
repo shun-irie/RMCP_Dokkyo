@@ -134,6 +134,13 @@ The function extracted the rotations of all bones from the animator. However, th
 public static void SetBoneRotationsFromByteArray(Animator animator, byte[] rotationsByteArray)
 ```
 The function updates avatar bones from a bone byte array.
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| Animator | animator | an animator of an avatar |
+| byte[] | rotationsByteArray | a byte array of all bones of an avatar |
+
 ```csharp
 public static Animator InitializeAnimator(string objectName, out float timePerFrame, float framesPerSecond)
 ```
