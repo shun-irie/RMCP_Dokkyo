@@ -46,11 +46,11 @@ Converting the bone names to the parameter of HumanBodyBones
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
 ```
-
+The function extracted the rotations of all bones from the animator. However, the avatar must be humanoid.
 ```csharp
 public static void SetBoneRotationsFromByteArray(Animator animator, byte[] rotationsByteArray)
 ```
-
+The function updates 
 ```csharp
 public static Animator InitializeAnimator(string objectName, out float timePerFrame, float framesPerSecond)
 ```
