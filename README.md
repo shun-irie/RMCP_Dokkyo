@@ -88,6 +88,7 @@ public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
 ```
 Converting the bone names to the parameter of HumanBodyBones.
 The list of HumanBodynames are written below. The definition of HumanBodyBones should be referred [here](https://docs.unity3d.com/ja/2020.3/ScriptReference/HumanBodyBones.html).
+
 **Input & Output**
 | String           | Class                       |
 | ---------------- | --------------------------- |
@@ -114,13 +115,21 @@ The list of HumanBodynames are written below. The definition of HumanBodyBones s
 | RightToes        | HumanBodyBones.RightToes    |
 | (default)        | HumanBodyBones.LastBone     |
 
-
-
-
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
 ```
-The function extracted the rotations of all bones from the animator. However, the avatar must be humanoid.
+The function extracted the rotations of all bones from the animator. However, the avatar must be ***humanoid***.
+
+** Input **
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+|Animator|animator|animator of an avatar |
+
+** Output **
+| type | description                         |
+| ---- | ----------------------------------- |
+| byte[] | a byte array including all bone rotations|
+
 ```csharp
 public static void SetBoneRotationsFromByteArray(Animator animator, byte[] rotationsByteArray)
 ```
