@@ -20,7 +20,8 @@ public class RMCprotocol : MonoBehaviourPun
 
     private void Update()
     {
-        calc_funcs.UpdateAnimator(photonView, sourceAnimator, ref timer, timePerFrame);
+        string rpcMethodName = "RPC_SetBoneRotationsFromByteArray";
+        calc_funcs.UpdateAnimator(photonView, sourceAnimator, ref timer, timePerFrame, rpcMethodName);
     }
 
     [PunRPC]
