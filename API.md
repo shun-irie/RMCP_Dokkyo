@@ -50,11 +50,12 @@ The function extracted the rotations of all bones from the animator. However, th
 ```csharp
 public static void SetBoneRotationsFromByteArray(Animator animator, byte[] rotationsByteArray)
 ```
-The function updates 
+The function updates avatar bones from a bone byte array.
 ```csharp
 public static Animator InitializeAnimator(string objectName, out float timePerFrame, float framesPerSecond)
 ```
-
+Initialize animator and update frequency
 ```csharp
-public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame)
+public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame, string rpcMethodName)
 ```
+The function processes the synchronization of avatar movement across users.
