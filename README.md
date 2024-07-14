@@ -87,7 +87,7 @@ public static string[] bones
 public static HumanBodyBones ConvertStringToHumanBodyBone(string boneName)
 ```
 Converting the bone names to the parameter of HumanBodyBones.
-The list of HumanBodynames are written below.
+The list of HumanBodynames are written below. The definition of HumanBodyBones should be referred [here](https://docs.unity3d.com/ja/2020.3/ScriptReference/HumanBodyBones.html).
 | string | Class |
 | ------ | ----- |
 | Hips | HumanBodyBones.Hips |
