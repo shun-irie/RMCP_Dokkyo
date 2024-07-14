@@ -85,7 +85,7 @@ namespace RPC
                     case "RightLowerLeg": return HumanBodyBones.RightLowerLeg;
                     case "RightFoot": return HumanBodyBones.RightFoot;
                     case "RightToes": return HumanBodyBones.RightToes;
-                    default: return HumanBodyBones.LastBone; // ���Ή��̏ꍇ
+                    default: return HumanBodyBones.LastBone; // –¢‘Î‰ž‚Ìê‡
                 }
             }
 
@@ -152,7 +152,7 @@ namespace RPC
                 }
             }
 
-            public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame)
+            public static void UpdateAnimator(PhotonView photonView, Animator sourceAnimator, ref float timer, float timePerFrame, string rpcMethodName)
             {
                 if (photonView.IsMine)
                 {
@@ -162,7 +162,7 @@ namespace RPC
                         timer -= timePerFrame;
                         if (sourceAnimator != null)
                         {
-                            photonView.RPC("RPC_SetBoneRotationsFromByteArray", RpcTarget.All, GetBoneRotationsAsByteArray(sourceAnimator));
+                            photonView.RPC(rpcMethodName, RpcTarget.All, GetBoneRotationsAsByteArray(sourceAnimator));
                         }
                     }
                 }
