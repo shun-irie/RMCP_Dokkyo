@@ -55,6 +55,12 @@ Converting the byte array of a bone rotation to a Quaternion array.
 public static byte[] Vector3ToByteArray(Vector3 vector)
 ```
 Converting the position data to a byte array.
+
+**Input**
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+| Vector3 | vector | a global position of root position of an avatar|
+
 ```csharp
 public static Vector3 ByteArrayToVector3(byte[] byteArray, int offset)
 ```
