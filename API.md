@@ -44,7 +44,7 @@ Converting the byte array of a bone rotation to a Quaternion array.
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 | byte[] | byteArray | joint rotation byte array calculated by QuaternionToByteArray|
-
+| int | offset | offset for reading byte array |
 
 ```csharp
 public static byte[] Vector3ToByteArray(Vector3 vector)
