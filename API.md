@@ -30,6 +30,7 @@ public static byte[] QuaternionToByteArray(Quaternion rotation)
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 | Quaternion | rotation | the quaternion of a bone|
+
 **Output**
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
