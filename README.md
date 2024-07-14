@@ -91,7 +91,9 @@ The list of HumanBodynames are written below.
 | string | Class |
 | ------ | ----- |
 | Hips | HumanBodyBones.Hips |
-
+| Spine | HumanBodyBones.Spine |
+| Chest | HumanBodyBones.Chest |
+| Neck | HumanBodyBones.Neck |
 
 ```csharp
 public static byte[] GetBoneRotationsAsByteArray(Animator animator)
