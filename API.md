@@ -6,9 +6,12 @@ This is an API document for using the RMC protocol.
 ```csharp
 public void Connect(string roomName, Vector3 initialPosition, string avatarPrefabName)
 ```
-roomName: Room name in the photon environment
-initialPosition: a global position where an avatar prefab is instantiated.
-avatarPrefabName: a name of avatar prefab file that is instantiated. The file must be included in Assets/Photon/PhotonUnityNetworking/Resources
+| type | parameter| description                         |
+| ---- | -------- | ----------------------------------- |
+|string| roomName | room name that the user will log in.|
+|Vector3|initialPosition|a global position where an avatar prefab is instantiated.|
+|string|avatarPrefabName| a name of avatar prefab file that is instantiated. The file must be included in Assets/Photon/PhotonUnityNetworking/Resources
+
 ```csharp
 public override void OnConnectedToMaster()
 ```
