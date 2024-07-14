@@ -6,6 +6,7 @@ This is an API document for using the RMC protocol.
 ```csharp
 public void Connect(string roomName, Vector3 initialPosition, string avatarPrefabName)
 ```
+Connecting to master and game servers.
 | type | parameter| description                         |
 | ---- | -------- | ----------------------------------- |
 |string| roomName | room name that the user will log in.|
