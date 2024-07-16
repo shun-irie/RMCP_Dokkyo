@@ -12,7 +12,7 @@ public class CreateServerPrefab : MonoBehaviour
     [MenuItem("RMC/Create Server Prefab")]
     static void CreateServerPrefabInHierarchy()
     {
-        // プレハブのパスを明示的に指定
+        // Setting the path of prefab
         string prefabPath = "Assets/Prefabs/ServerPrefab.prefab";
         GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
 
@@ -23,13 +23,13 @@ public class CreateServerPrefab : MonoBehaviour
         }
 
 #if PHOTON_UNITY_NETWORKING
-        // ヒエラルキーにプレハブのインスタンスを生成
+        // instantiate prefab into hierarchy
         GameObject instancePrefab = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
 
-        // 生成したオブジェクトを選択状態にする
+        // change to selected state
         Selection.activeObject = instancePrefab;
 
-        // アクションの完了を登録
+        // Completed actions
         Undo.RegisterCreatedObjectUndo(instancePrefab, "Create Server Prefab");
 #else
         Debug.LogWarning("Please import PUN2 to use this feature.");
