@@ -16,7 +16,7 @@ public class AutoSettingAvatarPrefab : Editor
             return;
         }
 
-        // Photonフォルダの存在をチェック
+        // Checking whether photon resource folder was existed
         string photonFolderPath = "Assets/Photon/PhotonUnityNetworking/Resources";
         if (!Directory.Exists(photonFolderPath))
         {
@@ -24,10 +24,10 @@ public class AutoSettingAvatarPrefab : Editor
             return;
         }
 
-        // 任意のスクリプトをプログラム上で指定
+        // Attaching scripts
         AttachScripts(selectedObject);
 
-        // Prefab化して保存
+        // Save an avatar as a prefab file
         SaveAsPrefab(selectedObject, photonFolderPath);
 
         Debug.Log("Scripts have been attached and the GameObject has been saved as a Prefab.");
@@ -35,7 +35,7 @@ public class AutoSettingAvatarPrefab : Editor
 
     private static void AttachScripts(GameObject obj)
     {
-        // アタッチしたいスクリプトをここに追加
+        // Add scripts here
         if (!obj.GetComponent<RMCprotocol>())
         {
             obj.AddComponent<RMCprotocol>();
@@ -50,15 +50,15 @@ public class AutoSettingAvatarPrefab : Editor
             obj.AddComponent<PhotonView>();
         }
 
-        // 必要に応じてさらにスクリプトを追加
+        // It is possible to add the scripts if necessary
     }
 
     private static void SaveAsPrefab(GameObject obj, string folderPath)
     {
-        // フォルダパスを元にPrefabのパスを作成
+        // Create the path
         string prefabPath = Path.Combine(folderPath, obj.name + ".prefab");
 
-        // Prefabを作成または更新
+        // Create and update prefab file
         PrefabUtility.SaveAsPrefabAsset(obj, prefabPath);
         AssetDatabase.SaveAssets();
     }
