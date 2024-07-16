@@ -3,32 +3,31 @@ using Photon.Pun;
 
 public class ControllerScript : MonoBehaviour
 {
-    // 対象のスクリプト名を保持するリスト
+    // The list of monobehaviours should be removed in remote places.
     public string[] motionCaptureScripts;
 
-    // スタート時に呼び出されるメソッド
     void Start()
     {
-        // PhotonViewを取得
+        // PhotonView instance
         PhotonView photonView = GetComponent<PhotonView>();
 
-        // このPhotonViewが自分のものでない場合
+        // PhotonView is not user's
         if (!photonView.IsMine)
         {
-            // すべてのコンポーネントを取得
+            // Get all components
             MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
 
-            // 各ターゲットスクリプト名について
+            // For all target monobehaviours
             foreach (string motionCaptureScript in motionCaptureScripts)
             {
                 Debug.Log($"Checking for script: {motionCaptureScript}");
 
-                // すべてのコンポーネントをチェック
+                // Checking components
                 foreach (var script in scripts)
                 {
                     Debug.Log($"Found script: {script.GetType().Name} (enabled: {script.enabled})");
 
-                    // コンポーネントの名前がターゲットスクリプト名と一致する場合、それを無効化
+                    // if the name of component is matched to a target, it should be disabled
                     if (script.GetType().Name == motionCaptureScript)
                     {
                         Debug.Log($"Disabling script: {motionCaptureScript}");
