@@ -8,7 +8,7 @@ using System;
 public class RMCprotocol : MonoBehaviourPun
 {
     public float framesPerSecond = 30f;
-    public Animator sourceAnimator;  // Made public to be set in the Inspector
+    public Animator sourceAnimator; 
     public Transform rootTransform;
     private float timePerFrame;
     private float timer;
