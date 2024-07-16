@@ -19,7 +19,7 @@ namespace RPC
             }
             else
             {
-                // PhotonServerのインスタンスを取得し、接続メソッドを呼び出す
+                // Get the method for connecting to photon server
                 PhotonServer.Instance.Connect(roomName, initialPosition, avatarPrefabName);
             }
         }
