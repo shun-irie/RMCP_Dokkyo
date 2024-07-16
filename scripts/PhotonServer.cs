@@ -33,21 +33,21 @@ namespace RPC
                 this.initialPosition = initialPosition;
                 this.avatarPrefabName = avatarPrefabName;
 
-                // PhotonServerSettingsの設定内容を使ってマスターサーバーへ接続する
+                // Connecting to master server using PhotonServerSettings
                 PhotonNetwork.ConnectUsingSettings();
             }
 
-            // マスターサーバーへの接続が成功した時に呼ばれるコールバック
+            // Callback for succeeding to connect to a master server
             public override void OnConnectedToMaster()
             {
-                // 指定された名前のルームに参加する（ルームが存在しなければ作成して参加する）
+                // connecting to room
                 PhotonNetwork.JoinOrCreateRoom(roomName, new RoomOptions(), TypedLobby.Default);
             }
 
-            // ゲームサーバーへの接続が成功した時に呼ばれるコールバック
+            // Callback for succeeding to connect to a game server
             public override void OnJoinedRoom()
             {
-                // 指定された初期座標に自身のアバター（ネットワークオブジェクト）を生成する
+                // instantiate the avatar prefab to initialPosition
                 PhotonNetwork.Instantiate(avatarPrefabName, initialPosition, Quaternion.identity);
             }
         }
