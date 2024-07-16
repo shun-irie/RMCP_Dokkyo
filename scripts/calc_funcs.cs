@@ -85,7 +85,7 @@ namespace RPC
                     case "RightLowerLeg": return HumanBodyBones.RightLowerLeg;
                     case "RightFoot": return HumanBodyBones.RightFoot;
                     case "RightToes": return HumanBodyBones.RightToes;
-                    default: return HumanBodyBones.LastBone; // ç„¡åŠ¹ãªå ´åˆã®å¯¾å‡¦
+                    default: return HumanBodyBones.LastBone; // –³Œø‚Èê‡‚Ì‘Îˆ
                 }
             }
 

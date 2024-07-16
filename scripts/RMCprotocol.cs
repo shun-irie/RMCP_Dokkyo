@@ -7,20 +7,22 @@ using System;
 
 public class RMCprotocol : MonoBehaviourPun
 {
-    public string sourceAnimatorObjectName = "target";
     public float framesPerSecond = 30f;
-    private Animator sourceAnimator;
-    private Transform rootTransform;
+    public Animator sourceAnimator;  // Made public to be set in the Inspector
+    public Transform rootTransform;
     private float timePerFrame;
     private float timer;
 
     private void Start()
     {
-        sourceAnimator = calc_funcs.InitializeAnimator(sourceAnimatorObjectName, out timePerFrame, framesPerSecond);
-        if (sourceAnimator != null)
+        if (sourceAnimator == null)
         {
-            rootTransform = sourceAnimator.transform;
+            Debug.LogError("Source Animator is not set in the Inspector.");
+            return;
         }
+
+        timePerFrame = 1f / framesPerSecond;
+       
     }
 
     private void Update()
