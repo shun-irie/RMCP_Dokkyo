@@ -45,4 +45,4 @@ Sometimes, the motion capture scripts interfered the other motion capture system
 ### 8. ServerPrefab settings
 Last, you should modify the ServerPrefab in the hierarchy, such as room name and avatar prefab name in the resource folder. Then, you can build remote motion capture environments!!
 
-The detail information about API should be refered [here][https://github.com/shun-irie/RMCP_Dokkyo/blob/main/API.md]
+The detail information about API should be refered [here](https://github.com/shun-irie/RMCP_Dokkyo/blob/main/API.md).
