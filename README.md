@@ -18,6 +18,10 @@ MEXT KAKENHI (S.I., no. 22H05220 and 24H00909) and Research Support Award 2023 o
 In this repository, you can install RMCP using expanded Editor functions in Unity.
 ## 1. Install unity package file
 The unity package file is available [here](https://github.com/shun-irie/RMCP_Dokkyo/raw/main/RemoteMotionCaptureProtocol.unitypackage).
-## 2. Import unity package on Unity
+## 2. Import PUN2 via package manager
+This unity package requires the PUN2 from Photon Engine. After installation of PUN2, you must input the App ID for Photon Server.
+PUN2 is available from [Unity Asset Store](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922?locale=ja-JP)
+## 3. Import unity package on Unity
+You can import the unitypackage file from Assets>Import package>Custom package
 
 
