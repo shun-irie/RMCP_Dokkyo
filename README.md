@@ -16,18 +16,27 @@ MEXT KAKENHI (S.I., no. 22H05220 and 24H00909) and Research Support Award 2023 o
 
 # How to install RMCP
 In this repository, you can install RMCP using expanded Editor functions in Unity.
-## 1. Install unity package file
+## Requirements
+| OS | Unity version |
+|---|---|
+| Windows 10 and 11| later 2021.3.26.f1 |
+| Mac OS later 13.4.1| later 2021.3.26.f1 |
+| Android (>API level 22)| later 2021.3.26.f1 |
+
+### 1. Install unity package file
 The unity package file is available [here](https://github.com/shun-irie/RMCP_Dokkyo/raw/main/RemoteMotionCaptureProtocol.unitypackage).
-## 2. Import PUN2 via package manager
+### 2. Import PUN2 via package manager
 This unity package requires the PUN2 from Photon Engine. After installation of PUN2, you must input the App ID for Photon Server.
 PUN2 is available from [Unity Asset Store](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922?locale=ja-JP).
-## 3. Import unity package on Unity
+### 3. Import unity package on Unity
 You can import the unitypackage file from Assets>Import package>Custom package.
-## 4. Create Server Prefab
+### 4. Create Server Prefab
 At first, you should create server prefab from the Menu (RMC>Create Server Prefab).
-## 5. Import avatar object with motion capture scripts
+### 5. Import avatar object with motion capture scripts
 You should import and add avatar object with motion capture scripts. The avatar rig must be set to humanoid.
-## 6. Avatar prefab settings
+### 6. Avatar prefab settings
 First, you should select the avatar object and run the auto setting function (RMC>Auto Setting Avatar Prefab). After setting the prefab, you should delete the avatar object from hierarchy.The avatar prefab is stored in Assets/Photon/PhotonUnityNetworking/Resources. In the inspector, you should set sampling frequency, the source animator, and root position of an avatar in the component of RMCprotocol.
-## 7. Deactivate setting for motion capture scripts in remote place
+### 7. Deactivate setting for motion capture scripts in remote place
 Sometimes, the motion capture scripts interfered the other motion capture system. Thus, the motion capture scripts must be deactivated in the remote places. You can deactivate the motion capture scripts in remote places using the component of Controller Script and input the names of MonoBehaviours related to motion capture functions.
+### 8. ServerPrefab settings
+Last, you should modify the ServerPrefab in the hierarchy, such as room name and avatar prefab name in the resource folder.
