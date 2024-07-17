@@ -43,4 +43,6 @@ First, you should select the avatar object and run the auto setting function (RM
 ### 7. Deactivate setting for motion capture scripts in remote place
 Sometimes, the motion capture scripts interfered the other motion capture system. Thus, the motion capture scripts must be deactivated in the remote places. You can deactivate the motion capture scripts in remote places using the component of Controller Script and input the names of MonoBehaviours related to motion capture functions.
 ### 8. ServerPrefab settings
-Last, you should modify the ServerPrefab in the hierarchy, such as room name and avatar prefab name in the resource folder.
+Last, you should modify the ServerPrefab in the hierarchy, such as room name and avatar prefab name in the resource folder. Then, you can build remote motion capture environments!!
+
+The detail information about API should be refered [here][https://github.com/shun-irie/RMCP_Dokkyo/blob/main/API.md]
