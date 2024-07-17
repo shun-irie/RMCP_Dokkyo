@@ -14,4 +14,6 @@ MEXT KAKENHI (S.I., no. 22H05220 and 24H00909) and Research Support Award 2023 o
 
 <img src="https://github.com/user-attachments/assets/82c7ad1f-8f74-4534-80d8-1e51b3fca6e6" width="160pt">
 
-# How to install Remote Motion Capture Protocol
+# How to install RMCP
+In this repository, you can install RMCP using expanded Editor functions in Unity.
+## 1. Install unity package file
