@@ -18,3 +18,6 @@ MEXT KAKENHI (S.I., no. 22H05220 and 24H00909) and Research Support Award 2023 o
 In this repository, you can install RMCP using expanded Editor functions in Unity.
 ## 1. Install unity package file
 The unity package file is available [here](https://github.com/shun-irie/RMCP_Dokkyo/raw/main/RemoteMotionCaptureProtocol.unitypackage).
+## 2. Import unity package on Unity
+
+
